@@ -1,0 +1,296 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* font-family: 'Public Sans', sans-serif; */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+/* font-family: 'Lato', sans-serif; */
+
+*{
+   padding: 0;
+   margin:  0;
+   box-sizing: border-box;
+}
+.main-section{
+    width: 210mm;
+    height: 297mm;
+    background-color: #F1ECE4;
+    margin: 0 auto;
+    display: flex;
+}
+
+body{
+    background-color: whitesmoke;
+}
+
+.main-section .left-part{
+    width: 40%;
+    height:100%;
+    background-color: #CCD2C6;
+    padding: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.left-part .myPicture img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.title{
+    font-family: 'Montserrat';
+    font-size: 1.3rem;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    background-color: #7F675B;
+    padding: 0.5rem;
+    margin: 1.4rem 0;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.contactInfo{
+    margin-bottom: 2.2rem;
+}
+.contactInfo .contactList{
+    display: flex;
+    gap: 1rem;
+    font-family: 'Lato';
+    margin-bottom: 0.5rem;
+    color: #444440;
+    font-size: 0.9rem;
+}
+
+.educationContainer .title{
+    font-family: 'Montserrat';
+    font-size: 1.3rem;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    background-color: #7F675B;
+    padding: 0.5rem;
+    margin: 1.4rem 0;
+    color: white;
+}
+
+.educationLevel .Level{
+    display: flex;
+    gap: 1rem;
+    font-family: 'Lato';
+    margin-bottom: 0.2rem;
+    color: #444440;
+    font-weight: bold;
+}
+
+.educationLevel .schoolName{
+    display: flex;
+    font-family: 'Lato';
+    color: #444440;
+    margin-bottom: 0.2rem;
+    font-size: 0.8rem;
+    text-indent: 2em;
+}
+
+.educationLevel .schoolAddress{
+    display: flex;
+    font-family: 'Lato';
+    color: #444440;
+    gap: 1rem;
+    margin-bottom: 0.2rem;
+    font-size: 0.8rem;
+    text-indent: 2em;
+}
+
+.educationLevel .schoolYear{
+    display: flex;
+    font-family: 'Lato';
+    color: #444440;
+    margin-bottom: 0.2rem;
+    font-size: 0.8rem;
+    text-indent: 2em;
+}
+
+.skillContainer .title{
+    font-family: 'Montserrat';
+    font-size: 1.3rem;
+    text-align: center;
+    letter-spacing: 0.3rem;
+    background-color: #7F675B;
+    padding: 0.5rem;
+    margin: 1.4rem 0;
+    color: white;
+}
+
+.mySkills li{
+    list-style-type: none;
+    padding-left: 20px;
+    font-family: 'Lato';
+    color: #444440;
+    gap: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    text-indent: 0.9em;
+}
+
+.right-part{
+    padding: 2.8rem;
+}
+
+.right-part .banner{
+    margin-bottom: 2.2rem;
+}
+
+.right-part .banner .name{
+    font-family: 'Public Sans';
+    color: #444440;
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.right-part .banner .surname{
+    font-family: 'Public Sans';
+    color: #444440;
+    font-size: 4rem;
+    font-weight: normal;
+    letter-spacing: 0.5rem;
+    margin-top: -1.5rem;
+    margin-bottom: 1rem;
+}
+
+.right-part .banner .courseBlock{
+    font-family: 'Lato';
+    color: #444440;
+    letter-spacing: 0.2rem;
+    margin-top: -0.5rem;
+    text-indent: 0.3rem;
+    font-size: smaller;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    margin-bottom: 5.7rem;
+}
+
+.line{
+    background-color: #444440;
+    height: 0.1rem;
+    width: 110%;
+    margin-top: -4rem;
+    margin-bottom: -0.5rem;
+
+}
+
+.AboutMe-container .title{
+   font-size: 1.3rem;
+   background-color: #F1ECE4;
+   text-align: left;
+   text-indent: -0.2rem;
+   margin-bottom: 0.5rem;
+   color: #594A26;
+   box-shadow: none; 
+}
+
+.aboutMe-infos{
+    display: contents;
+    font-family: 'Lato';
+    color: #444440;
+    margin-top: 5rem;
+    font-size: 0.9rem;
+}
+
+.AboutMe-container .aboutMe-infos p {
+    padding-bottom: 0.3rem;
+  }
+
+  .jobName{
+    font-family: 'Lato';
+    color: #444440;
+    font-size: 1.5rem;
+    margin-top: -0.5rem;
+  }
+
+  .where{
+    font-family: 'Lato';
+    font-size: 0.9rem;
+    color: #444440;
+    margin-bottom: -0.5rem;
+  }
+
+  .jobYear{
+    font-family: 'Lato';
+    font-size: 0.9rem;
+    color: #444440;
+    text-indent: 1.3em;
+    margin-bottom: 0.5rem;
+  }
+
+  .infos{
+    font-family: 'Lato';
+    font-size: 0.9rem;
+    color: #444440;
+    text-align: justify;
+    padding-left: 1.2em;
+  }
+
+  .jobName2{
+    font-family: 'Lato';
+    color: #444440;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .where2{
+    font-family: 'Lato';
+    font-size: 0.9rem;
+    color: #444440;
+    margin-bottom: -0.6rem;
+  }
+
+  .year{
+    font-family: 'Lato';
+    font-size: 0.9rem;
+    color: #444440;
+    text-indent: 1.3em;
+    margin-bottom: 0.5rem;
+  }
+
+  .infos2{
+    font-family: 'Lato';
+    font-size: 0.9rem;
+    color: #444440;
+    text-align: justify;
+    padding-left: 1.2em;
+  }
+
+  .language-container .title{
+    font-size: 1.3rem;
+    background-color: #F1ECE4;
+    text-align: left;
+    text-indent: -0.2rem;
+    margin-bottom: 0.5rem;
+    color: #594A26;
+    box-shadow: none;
+    margin-bottom: -0.1rem;
+ }
+
+ .language-container .languages{
+    margin-top: -0.3rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.4rem;
+    font-family: 'Lato';
+    font-size: 0.9rem;
+    margin-right: 10px;
+ }
+ .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar {
+    height: 10px;
+    background-color: #444440;
+    margin-right: -10px;
+}
