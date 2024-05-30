@@ -1,69 +1,41 @@
 <?php
-require_once "../database.php";
+session_start(); //start session
+include_once "../database.php";
 
-// Start session
-session_start();
+$username = mysqli_real_escape_string($conn, $_POST['username']);
+$user_password = mysqli_real_escape_string($conn, $_POST['user_password']);
 
-/**
- * Validate and sanitize input data
- * @param string $data
- * @return string
- */
-function validateInput($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
-}
+$sql_check_user_info = "SELECT *
+                              FROM `user_info`
+                            WHERE `username` = '$username'
+                              AND `user_password` = '$user_password'
+                            ";
+$sql_result = mysqli_query($conn, $sql_check_user_info);
+$count_result = mysqli_num_rows($sql_result);
 
-/**
- * Login customer
- * @param string $username
- * @param string $password
- */
-function loginCustomer($username, $user_password) {
-    global $conn; // Access the global $conn variable
+if ($count_result == 1) {
+    //existing user
+    $row = mysqli_fetch_assoc($sql_result);
 
-    $sql = "SELECT * FROM user_info WHERE username =?";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("s", $username);
-    $stmt->execute();
-    $result = $stmt->get_result();
+    //create session variables
+    $_SESSION['user_info_id'] = $row['user_info_id'];
+    $_SESSION['username'] = $username;
+    $_SESSION['user_info_user_password'] = $row['user_password'];
+    $_SESSION['user_info_fullname'] = $row['fullname'];
+    $_SESSION['user_info_user_address'] = $row['user_address'];
+    $_SESSION['user_info_contact_no'] = $row['contact_no'];
+    $_SESSION['user_info_user_type'] = $row['user_type'];
+    $_SESSION['user_info_email'] = $row['email'];
 
-    if ($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        if (password_verify($user_password, $row['user_password'])) {
-            // Login successful
-            $_SESSION['username'] = $username;
-            if ($row['user_type'] == 'A') {
-                // Admin login, redirect to admin panel
-                $_SESSION['admin_greeting'] = "Welcome, " . $username;
-                header("Location:../admin.php");
-                exit;
-            } else {
-                // Customer login, redirect to index page
-                header("Location:../index.php");
-                exit;
-            }
-        } else {
-            // Password is incorrect
-            throw new Exception("Password is incorrect");
-        }
-    } else {
-        // Username not found
-        throw new Exception("Username not found");
+    if ($_SESSION['user_info_user_type'] == 'A') {
+        //admin
+        header("location: ../admin.php");
+    } else if ($_SESSION['user_info_user_type'] == 'C') {
+        //shopping list
+        header("location: ../shopping.php");
     }
+} else {
+    //username and password does not exist
+    header("location: registration.php?error=user_not_exist");
 }
-
-
-try {
-    $username = validateInput($_POST['username']);
-    $user_password = validateInput($_POST['user_password']);
-    loginCustomer($username, $user_password);
-} catch (Exception $e) {
-    echo "Error: ". $e->getMessage();
-}
-
-
-// Close database connection
-$conn->close();
+?>
