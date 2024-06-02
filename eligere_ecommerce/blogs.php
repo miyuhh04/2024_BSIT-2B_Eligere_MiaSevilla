@@ -23,9 +23,9 @@
         <div class="card">
           <img src="./images/images0.jpeg" alt="">
           <div class="card-body">
-            <h3>Lorem, ipsum dolor</h3>
-            <h5>Admin / 6 January 2023</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quis aperiam magnam nostrum quae distinctio, id minima repellat eveniet quaerat.</p>
+            <h3>Pendant Necklace</h3>
+            <h5>Admin / 6 March 2024</h5>
+            <p>Perfect for drawing attention to your neckline.</p>
             <button id="blogbtn">Read More.</button>
           </div>
         </div>  
@@ -34,9 +34,9 @@
         <div class="card">
           <img src="./images/images1.jpeg" alt="">
           <div class="card-body">
-            <h3>Lorem, ipsum dolor</h3>
-            <h5>Admin / 6 February 2020</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quis aperiam magnam nostrum quae distinctio, id minima repellat eveniet quaerat.</p>
+            <h3>Patterned Bracelet</h3>
+            <h5>Admin / 12 April 2024</h5>
+            <p>Offer intricate designs for a more detailed look.</p>
             <button id="blogbtn">Read More.</button>
           </div>
         </div>  
@@ -45,9 +45,9 @@
         <div class="card">
           <img src="./images/images2.jpeg" alt="">
           <div class="card-body">
-            <h3>Lorem, ipsum dolor</h3>
-            <h5>Admin / 6 March 2020</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quis aperiam magnam nostrum quae distinctio, id minima repellat eveniet quaerat.</p>
+            <h3> Contemporary Gold Rings</h3>
+            <h5>Admin / 5 May 2024</h5>
+            <p>A fun way to add interest to your hands, especially in photos.</p>
             <button id="blogbtn">Read More.</button>
           </div>
         </div>  
@@ -60,7 +60,7 @@
     <style>
 .blogs{
   width: 100%;
-  background: #f7f5f2;
+  background: lightgrey;
 }
 .blogs h1{
   text-align: center;
