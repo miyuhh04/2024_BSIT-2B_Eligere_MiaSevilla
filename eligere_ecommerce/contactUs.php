@@ -21,7 +21,7 @@
         <p><i class="bi bi-envelope"></i> eligere@gmail.com</p>
         <p><i class="bi bi-phone"></i> 0924681012</p>
         <p><i class="bi bi-building"></i> Eligere Philippines</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, culpa</p>
+        <p>Please call or message us, we're grateful to serve you.</p>
       </div>
     </div>
     <div class="image">
@@ -39,7 +39,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: lightblue;
   }
 
   .contact-wrap {
